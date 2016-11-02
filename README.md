@@ -81,7 +81,7 @@ The following properties can be configured:
 		<tr>
 			<td><code>updateInterval</code></td>
 			<td>How often does the content needs to be fetched? Depends on your API WU plan. (Milliseconds)<br>
-				<br><b>Default value:</b> <code>600000</code> (10 minutes)
+				<br><b>Default value:</b> <code>10800 * 1000</code> (3 houres)
 			</td>
 		</tr>
 		<tr>
