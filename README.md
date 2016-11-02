@@ -78,5 +78,41 @@ The following properties can be configured:
 				<br><b>Default value:</b> <code>EN</code>
 			</td>
 		</tr>
+		<tr>
+			<td><code>updateInterval</code></td>
+			<td>How often does the content needs to be fetched? Depends on your API WU plan. (Milliseconds)<br>
+				<br><b>Default value:</b> <code>600000</code> (10 minutes)
+			</td>
+		</tr>
+		<tr>
+			<td><code>animationSpeed</code></td>
+			<td>Speed of the update animation. (Milliseconds)<br>
+				<br><b>Default value:</b> <code>2000</code> (2 seconds)
+			</td>
+		</tr>
+		<tr>
+			<td><code>initialLoadDelay</code></td>
+			<td>The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds)<br>
+				<br><b>Default value:</b>  <code>0</code>
+			</td>
+		</tr>
+			<tr>
+			<td><code>rentryDelay</code></td>
+			<td>The delay before retrying after a request failure. (Milliseconds)<br>
+				<br><b>Default value:</b>  <code>2500</code>
+			</td>
+		</tr>
+		<tr>
+			<td><code>apiBase</code></td>
+			<td>The OpenWeatherMap base URL.<br>
+				<br><b>Default value:</b>  <code>'http://api.wunderground.com/api'</code>
+			</td>
+		</tr>
+		<tr>
+			<td><code>weatherEndpoint</code></td>
+			<td>The Weather Underground API endPoint.<br>
+				<br><b>Default value:</b>  <code>'.json'</code>
+			</td>
+		</tr>
 	</tbody>
 </table>
