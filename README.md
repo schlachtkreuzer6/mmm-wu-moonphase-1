@@ -7,7 +7,7 @@ The `mmm-wu-moonphase` module is a modules of the MagicMirror. This module displ
 In your terminal, go to your MagicMirror's Module folder:
 ````
 cd ~/MagicMirror/modules
-git clone https://github.com/<username>/<module-name>.git
+git clone https://github.com/raffaelloit/mmm-wu-moonphase.git
 ````
 
 Configure the module in your `config.js` file.
