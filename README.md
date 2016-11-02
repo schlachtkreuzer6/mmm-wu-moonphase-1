@@ -25,7 +25,7 @@ modules: [
                 position: 'top_right',  // this can be any of the regions.   
 		              config: {
                       // See 'Configuration options' for more information.
-                      apikey: 'abcde12345abcde12345abcde12345ab', // your API-Key from wunderground.org
+                      apikey: 'abcde12345abcde12345abcde12345ab',
                       country: 'Switzerland',
                       city: 'Bern',
                       apiLang: 'EN',
@@ -76,42 +76,6 @@ The following properties can be configured:
 			<td>The apiLang define the language of the json query. See <a href="https://www.wunderground.com/weather/api/d/docs?d=language-support">Weather Underground language support</a><br>
 				<br><b>Possible values:</b> <code>DL</code>
 				<br><b>Default value:</b> <code>EN</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>updateInterval</code></td>
-			<td>How often does the content needs to be fetched? (Milliseconds)<br>
-				<br><b>Default value:</b> <code>10800000</code> (every 3 houres)
-			</td>
-		</tr>
-		<tr>
-			<td><code>animationSpeed</code></td>
-			<td>Speed of the update animation. (Milliseconds)<br>
-				<br><b>Default value:</b> <code>1000</code> (1 seconds)
-			</td>
-		</tr>
-		<tr>
-			<td><code>initialLoadDelay</code></td>
-			<td>The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds)<br>
-				<br><b>Default value:</b>  <code>0</code> (0 seconds)
-			</td>
-		</tr>
-		<tr>
-			<td><code>retryDelay</code></td>
-			<td>The delay before retrying after a request failure. (Milliseconds)<br>
-				<br><b>Default value:</b>  <code>2500</code> (2.5 seconds)
-			</td>
-		</tr>
-		<tr>
-			<td><code>apiBase</code></td>
-			<td>The Weather Underground  base URL.<br>
-				<br><b>Default value:</b> <code>'http://api.wunderground.com/api'</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>moonEndpoint</code></td>
-			<td>The Weather Underground API endPoint.<br>
-				<br><b>Default value:</b>  <code>'.json'</code>
 			</td>
 		</tr>
 	</tbody>
