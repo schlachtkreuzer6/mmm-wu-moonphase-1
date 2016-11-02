@@ -1,7 +1,7 @@
-/* Module for Moonphase */
+/* Module for Moon phase */
 
 /* Magic Mirror
- * Module: MoonPhase based on CurrentWeather
+ * Module: Moon phase based on CurrentWeather
  * 
  * Written by Raffaello Gruosso http://raffael.lo.it
  * Oringinal by Michael Teeuw http://michaelteeuw.nl
@@ -13,16 +13,16 @@ Module.register("mmm-wu-moonphase",{
     
 	// Default module config.
 	defaults: {
-				apikey: "",
-				country: "",
-				city: "",
-				apiLang: "EN", // default API language englisch, see link
+				apikey: "", // Set or get your API under https://www.wunderground.com/weather/api/d/pricing.html
+				country: "Switzerland", // Search your country under https://www.wunderground.com/
+				city: "Bern", // See comment country
+				apiLang: "EN", // default API language englisch, see https://www.wunderground.com/weather/api/d/docs?d=language-support
 				updateInterval: 10800 * 1000, // every 3 houres
 				animationSpeed: 1000,				
 				initialLoadDelay: 0, // 0 seconds delay
 				retryDelay: 2500,				                
-				apiBase: "http://api.wunderground.com/api",
-				moonEndpoint: ".json",
+				apiBase: "http://api.wunderground.com/api", // URL string for json query
+				moonEndpoint: ".json", // URL Endpoint for json query
 		},
 
 	// Define start sequence.
@@ -85,7 +85,7 @@ Module.register("mmm-wu-moonphase",{
         small.appendChild(moonIcon);
 
         var percentIlluminated = document.createElement("div");
-		percentIlluminated.innerHTML = " " + this.percentIlluminated + " % beleuchtet";
+		percentIlluminated.innerHTML = " " + this.percentIlluminated + " % illuminated";
 		small.appendChild(percentIlluminated);
 
 		wrapper.appendChild(small);
@@ -93,8 +93,8 @@ Module.register("mmm-wu-moonphase",{
 	},
 
 	/* updateMoonphase(compliments)
-	 * Requests new data from openweather.org.
-	 * Calls processWeather on succesfull response.
+	 * Requests new data from wunderground.com.
+	 * Calls processMoonphase on succesfull response.
 	 */
 	updateMoonphase: function() {
 		var url = this.config.apiBase + this.getParams();
@@ -144,7 +144,7 @@ Module.register("mmm-wu-moonphase",{
 	/* processMoonphase(data)
 	 * Uses the received data to set the various values.
 	 *
-	 * argument data object - Moonphase information received form openweather.org.
+	 * argument data object - Moon phase information received form wunderground.com.
 	 */
 	processMoonphase: function(data) {
 		this.percentIlluminated = data.moon_phase.percentIlluminated;

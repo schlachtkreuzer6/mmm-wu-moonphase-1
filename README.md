@@ -14,7 +14,7 @@ Configure the module in your `config.js` file.
 
 ## Using the module
 
-There isn't much to configure really, you just need to position it, you can always hack him to find a better suitable size for you
+Get und set your API from wunderground.com and set your location and preferred language.
 
 Now add the module to the modules array in the `config/config.js` file:
 ````javascript
@@ -52,142 +52,67 @@ The following properties can be configured:
 	
 		<tr>
 			<td><code>apikey</code></td>
-			<td>The <a href="https://home.openweathermap.org" target="_blank">OpenWeatherMap</a> API key, which can be obtained by creating an OpenWeatherMap account.<br>
+			<td>The <a href="https://www.wunderground.com/" target="_blank">Weatherunderground</a> API key, which can be obtained by creating an Weather Underground account.<br>
 				<br> This value is <b>REQUIRED</b>
 			</td>
 		</tr>
 		<tr>
-			<td><code>location</code></td>
-			<td>The location used for weather information.<br>
-				<br><b>Example:</b> <code>Bern,Switzerland</code>
-				<br><b>Default value:</b> <code>New York</code>
+			<td><code>country</code></td>
+			<td>Search your city under  <a href="https://www.wunderground.com">Weather Underground</a> <b>This will override the default value <code>Bern></code>.<br>
+				<br><b>Example:</b> <code>United Kingdom</code>
+				<br><b>Default value:</b> <code>Switzerland</code>
+				<br> This value is <b>REQUIRED</b>
 			</td>
 		</tr>
 		<tr>
-			<td><code>locationID</code></td>
-			<td>Location ID from <a href="http://bulk.openweather.org/sample/">OpenWeather</a> <b>This will override anything you put in location.</b><br>Leave blank if you want to use location.
-				<br><b>Example:</b> <code>1234567</code>
-				<br><b>Default value:</b> <code></code>
+			<td><code>city</code></td>
+			<td>Search your city under  <a href="https://www.wunderground.com">Weather Underground</a> <b>This will override the default value <code>Bern></code>.<br>
+				<br><b>Example:</b> <code>London</code>
+				<br><b>Default value:</b> <code>Bern</code>
+				<br> This value is <b>REQUIRED</b>
 			</td>
 		</tr>
 		<tr>
-			<td><code>units</code></td>
-			<td>What units to use. Specified by config.js<br>
-				<br><b>Possible values:</b> <code>config.units</code> = Specified by config.js, <code>default</code> = Kelvin, <code>metric</code> = Celsius, <code>imperial</code> =Fahrenheit
-				<br><b>Default value:</b> <code>config.units</code>
+			<td><code>apiLang</code></td>
+			<td>The apiLang define the language of the json query. See <a href="https://www.wunderground.com/weather/api/d/docs?d=language-support">Weather Underground language support</a><br>
+				<br><b>Possible values:</b> <code>DL</code>. 
+				<br><b>Default value:</b> <code>EN</code>
 			</td>
 		</tr>
 		<tr>
 			<td><code>updateInterval</code></td>
 			<td>How often does the content needs to be fetched? (Milliseconds)<br>
-				<br><b>Possible values:</b> <code>1000</code> - <code>86400000</code>
-				<br><b>Default value:</b> <code>300000</code> (10 minutes)
+				<br><b>Default value:</b> <code>10800000</code> (every 3 houres)
 			</td>
 		</tr>
 		<tr>
 			<td><code>animationSpeed</code></td>
 			<td>Speed of the update animation. (Milliseconds)<br>
-				<br><b>Possible values:</b><code>0</code> - <code>5000</code>
-				<br><b>Default value:</b> <code>2000</code> (2 seconds)
-			</td>
-		</tr>
-		<tr>
-			<td><code>timeFormat</code></td>
-			<td>Use 12 or 24 hour format.<br>
-				<br><b>Possible values:</b> <code>12</code> or <code>24</code>
-				<br><b>Default value:</b> uses value of <i>config.timeFormat</i>
-			</td>
-		</tr>
-		<tr>
-			<td><code>showPeriod</code></td>
-			<td>Show the period (am/pm) with 12 hour format<br>
-				<br><b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br><b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>showPeriodUpper</code></td>
-			<td>Show the period (AM/PM) with 12 hour format as uppercase<br>
-				<br><b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br><b>Default value:</b> <code>false</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>showWindDirection</code></td>
-			<td>Show the wind direction next to the wind speed.<br>
-				<br><b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br><b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>useBeaufort</code></td>
-			<td>Pick between using the Beaufort scale for wind speed or using the default units.<br>
-				<br><b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br><b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>lang</code></td>
-			<td>The language of the days.<br>
-				<br><b>Possible values:</b> <code>en</code>, <code>nl</code>, <code>ru</code>, etc ...
-				<br><b>Default value:</b> uses value of <i>config.language</i>
+				<br><b>Default value:</b> <code>1000</code> (1 seconds)
 			</td>
 		</tr>
 		<tr>
 			<td><code>initialLoadDelay</code></td>
 			<td>The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds)<br>
-				<br><b>Possible values:</b> <code>1000</code> - <code>5000</code>
-				<br><b>Default value:</b>  <code>0</code>
+				<br><b>Default value:</b>  <code>0</code> (0 seconds)
 			</td>
 		</tr>
 		<tr>
 			<td><code>retryDelay</code></td>
 			<td>The delay before retrying after a request failure. (Milliseconds)<br>
-				<br><b>Possible values:</b> <code>1000</code> - <code>60000</code>
-				<br><b>Default value:</b>  <code>2500</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>apiVersion</code></td>
-			<td>The OpenWeatherMap API version to use.<br>
-				<br><b>Default value:</b>  <code>2.5</code>
+				<br><b>Default value:</b>  <code>2500</code> (2.5 seconds)
 			</td>
 		</tr>
 		<tr>
 			<td><code>apiBase</code></td>
-			<td>The OpenWeatherMap base URL.<br>
-				<br><b>Default value:</b>  <code>'http://api.openweathermap.org/data/'</code>
+			<td>The Weather Underground  base URL.<br>
+				<br><b>Default value:</b> <code>'http://api.wunderground.com/api'</code>
 			</td>
 		</tr>
 		<tr>
-			<td><code>weatherEndpoint</code></td>
-			<td>The OpenWeatherMap API endPoint.<br>
-				<br><b>Default value:</b>  <code>'weather'</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>iconTable</code></td>
-			<td>The conversion table to convert the weather conditions to weather-icons.<br>
-				<br><b>Default value:</b>  <code>iconTable: {
-			'01d':'wi-day-sunny',
-			'02d':'wi-day-cloudy',
-			'03d':'wi-cloudy',
-			'04d':'wi-cloudy-windy',
-			'09d':'wi-showers',
-			'10d':'wi-rain',
-			'11d':'wi-thunderstorm',
-			'13d':'wi-snow',
-			'50d':'wi-fog',
-			'01n':'wi-night-clear',
-			'02n':'wi-night-cloudy',
-			'03n':'wi-night-cloudy',
-			'04n':'wi-night-cloudy',
-			'09n':'wi-night-showers',
-			'10n':'wi-night-rain',
-			'11n':'wi-night-thunderstorm',
-			'13n':'wi-night-snow',
-			'50n':'wi-night-alt-cloudy-windy'
-		}</code>
+			<td><code>moonEndpoint</code></td>
+			<td>The Weather Underground API endPoint.<br>
+				<br><b>Default value:</b>  <code>'.json'</code>
 			</td>
 		</tr>
 	</tbody>
