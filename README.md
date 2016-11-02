@@ -48,8 +48,7 @@ The following properties can be configured:
 			<th width="100%">Description</th>
 		</tr>
 	<thead>
-	<tbody>
-	
+	<tbody>	
 		<tr>
 			<td><code>apikey</code></td>
 			<td>The <a href="https://www.wunderground.com/" target="_blank">Weatherunderground</a> API key, which can be obtained by creating an Weather Underground account.<br>
@@ -58,24 +57,24 @@ The following properties can be configured:
 		</tr>
 		<tr>
 			<td><code>country</code></td>
-			<td>Search your city under  <a href="https://www.wunderground.com">Weather Underground</a> <b>This will override the default value <code>Bern></code>.<br>
+			<td>Search your city under <a href="https://www.wunderground.com">Weather Underground</a> <b>This will override the default value <code>Switzerland</code>.<br>
 				<br><b>Example:</b> <code>United Kingdom</code>
-				<br><b>Default value:</b> <code>Switzerland</code>
+				<br><b>Default value:</b> <code>Switzerland</code><br>
 				<br> This value is <b>REQUIRED</b>
 			</td>
 		</tr>
 		<tr>
 			<td><code>city</code></td>
-			<td>Search your city under  <a href="https://www.wunderground.com">Weather Underground</a> <b>This will override the default value <code>Bern></code>.<br>
+			<td>Search your city under  <a href="https://www.wunderground.com">Weather Underground</a> <b>This will override the default value <code>Bern</code>.<br>
 				<br><b>Example:</b> <code>London</code>
-				<br><b>Default value:</b> <code>Bern</code>
+				<br><b>Default value:</b> <code>Bern</code><br>
 				<br> This value is <b>REQUIRED</b>
 			</td>
 		</tr>
 		<tr>
 			<td><code>apiLang</code></td>
 			<td>The apiLang define the language of the json query. See <a href="https://www.wunderground.com/weather/api/d/docs?d=language-support">Weather Underground language support</a><br>
-				<br><b>Possible values:</b> <code>DL</code>. 
+				<br><b>Possible values:</b> <code>DL</code>
 				<br><b>Default value:</b> <code>EN</code>
 			</td>
 		</tr>
