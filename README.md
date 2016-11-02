@@ -57,7 +57,7 @@ The following properties can be configured:
 		</tr>
 		<tr>
 			<td><code>country</code></td>
-			<td>Search your city under <a href="https://www.wunderground.com">Weather Underground</a> <b>This will override the default value <code>Switzerland</code>.<br>
+			<td>Search your country under <a href="https://www.wunderground.com">Weather Underground</a> <b>This will override the default value <code>Switzerland</code>.<br>
 				<br><b>Example:</b> <code>United Kingdom</code>
 				<br><b>Default value:</b> <code>Switzerland</code><br>
 				<br> This value is <b>REQUIRED</b>
