@@ -26,9 +26,9 @@ modules: [
 		              config: {
                       // See 'Configuration options' for more information.
                       apikey: 'abcde12345abcde12345abcde12345ab', // your API-Key from wunderground.org
-                      country: 'Switzerland', // see exaple under: https://www.wunderground.com/weather/api/d/docs?d=data/astronomy
-                      city: 'Bern', // same here like country
-                      apiLang: 'EN', // Default englisch, see other language code under: https://www.wunderground.com/weather/api/d/docs?d=language-support
+                      country: 'Switzerland',
+                      city: 'Bern',
+                      apiLang: 'EN',
 				
                 }
         },
@@ -52,7 +52,7 @@ The following properties can be configured:
 		<tr>
 			<td><code>apikey</code></td>
 			<td>The <a href="https://www.wunderground.com/" target="_blank">Weatherunderground</a> API key, which can be obtained by creating an Weather Underground account.<br>
-				<br> This value is <b>REQUIRED</b>
+				<br>This value is <b>REQUIRED</b>
 			</td>
 		</tr>
 		<tr>
