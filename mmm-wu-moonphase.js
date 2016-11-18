@@ -68,7 +68,7 @@ Module.register("mmm-wu-moonphase",{
 		}
 
 		if (this.config.city === "") {
-			wrapper.innerHTML = this.translate("") + this.name + ".";
+			wrapper.innerHTML = this.translate("APICITY") + this.name + ".";
 			wrapper.className = "dimmed light small";
 			return wrapper;
 		}
@@ -95,7 +95,7 @@ Module.register("mmm-wu-moonphase",{
         small.appendChild(moonIcon);
 
         var percentIlluminated = document.createElement("div");
-		percentIlluminated.innerHTML = " " + this.percentIlluminated + " % illuminated";
+		percentIlluminated.innerHTML = this.percentIlluminated + " % "+ this.translate("ILLUM");
 		small.appendChild(percentIlluminated);
 
 		wrapper.appendChild(small);
