@@ -1,0 +1,7 @@
+{
+	"APIKEY":	"Bitte setzen Sie den korrekten Weatherunderground API in der config für das Modul: ",
+	"APICTRY":	"Bitte setzen Sie ein Land in die config für das Modul: ",
+	"APICITY":	"Bitte setzen Sie ein Stadt in die config für das Modul: ",
+	"LOAD":		"Mondphase wird geladen...",
+	"ILLUM":	"beleuchtet"
+}

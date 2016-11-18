@@ -40,31 +40,41 @@ Module.register("mmm-wu-moonphase",{
 		this.updateTimer = null;
 
 	},    
+
+	// Define required translations.
+	getTranslations: function () {
+        return {
+            en: "translations/en.json",
+            de: "translations/de.json",
+            dl: "translations/de.json",
+            it: "translations/it.json"            
+        };
+    },
     
 	// Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("div");
 
 		if (this.config.apikey === "") {
-			wrapper.innerHTML = "Please set the correct weatherunderground <i>apikey</i> in the config for module: " + this.name + ".";
+			wrapper.innerHTML = this.translate("APIKEY") + this.name + ".";
 			wrapper.className = "dimmed light small";
 			return wrapper;
 		}
 
 		if (this.config.country === "") {
-			wrapper.innerHTML = "Please set the weatherunderground <i>country</i> in the config for module: " + this.name + ".";
+			wrapper.innerHTML = this.translate("APICTRY") + this.name + ".";
 			wrapper.className = "dimmed light small";
 			return wrapper;
 		}
 
 		if (this.config.city === "") {
-			wrapper.innerHTML = "Please set the weatherunderground <i>city</i> in the config for module: " + this.name + ".";
+			wrapper.innerHTML = this.tranlate("") + this.name + ".";
 			wrapper.className = "dimmed light small";
 			return wrapper;
 		}
 
 		if (!this.loaded) {
-			wrapper.innerHTML = "Loading moonphase ...";
+			wrapper.innerHTML = this.tranlate("LOAD");
 			wrapper.className = "dimmed light small";
 			return wrapper;
 		}

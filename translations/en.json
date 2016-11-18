@@ -1,0 +1,7 @@
+{
+	"APIKEY":	"Please set the correct weatherunderground apikey in the config for module: ",
+	"APICTRY":	"Please set the weatherunderground country in the config for module: ",
+	"APICITY":	"Please set the weatherunderground city in the config for module: ",
+	"LOAD":		"Loading moonphase ...",
+	"ILLUM":	"illuminated"
+}

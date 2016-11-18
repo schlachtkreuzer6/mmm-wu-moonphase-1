@@ -1,0 +1,7 @@
+{
+	"APIKEY":	"Si prega di impostare la chiave API corretta per weatherunderground nella configurazione per il modulo: ",
+	"APICTRY":	"Si prega di impostare un paese correto nella configurazione per il modulo: ",
+	"APICITY":	"Si prega di impostare una città corretta nella configurazione per il modulo: ",
+	"LOAD":		"Caricamento fase lunare...",
+	"ILLUM":	"illuminato"
+}
