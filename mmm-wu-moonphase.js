@@ -68,13 +68,13 @@ Module.register("mmm-wu-moonphase",{
 		}
 
 		if (this.config.city === "") {
-			wrapper.innerHTML = this.tranlate("") + this.name + ".";
+			wrapper.innerHTML = this.translate("") + this.name + ".";
 			wrapper.className = "dimmed light small";
 			return wrapper;
 		}
 
 		if (!this.loaded) {
-			wrapper.innerHTML = this.tranlate("LOAD");
+			wrapper.innerHTML = this.translate("LOAD");
 			wrapper.className = "dimmed light small";
 			return wrapper;
 		}
